@@ -1,7 +1,7 @@
 # coding: utf-8
 #
 # hw0pr2a.py
-#
+# Setting Up Git, now
 
 import random          # imports the library named random
 
