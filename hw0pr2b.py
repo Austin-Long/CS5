@@ -20,7 +20,7 @@ def adventure():
         arguments: no arguments (prompted text doesn't count as an argument)
         results: no results     (printing doesn't count as a result)
     """
-    delay = 0.0          # change to 0.0 for testing or speed runs,
+    delay = 3.0          # change to 0.0 for testing or speed runs,
                          # ..larger for dramatic effect!
 
     username = input("Who goes there? ")
@@ -69,6 +69,7 @@ def adventure():
 def choice():
     choice = input("Welcome to the land of the snow! A crazy old woman lives in these hills, would you like to enter? (y/n) ")
     if choice == 'y':
+        print()
         print("You are a brave traveler...Great riches are abound.")
         snow()
 
