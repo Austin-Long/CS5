@@ -4,7 +4,7 @@
 #
 
 """
-Title for your adventure:   The Quest.
+Title for your adventure:   The Dodd Quest 1.0.
 
 Notes on how to "win" or "lose" this adventure:
   To win, choose the .
