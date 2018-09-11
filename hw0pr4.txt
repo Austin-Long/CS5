@@ -1,0 +1,21 @@
+# Intersection Rule, facing East
+0 *x** -> E 1
+
+#empty South, turn south and move
+1 ***x -> S 2
+
+#Wall on South turn and Face North
+1 ***S -> X 0
+
+# Corridor
+0 *E** -> X 3
+3 x*** -> N 0
+
+# Dead End
+3 N*** -> X 2
+
+#Empty West, turn West and move
+2 **x* -> W 3
+
+# Wall West, Turn East
+2 **W* -> X 1

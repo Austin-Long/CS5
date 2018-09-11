@@ -1,0 +1,16 @@
+#
+# Move to start position in top left corner
+0 x*** -> N 0
+0 N*x* -> W 0
+
+# Move to state 1
+0 N*W* -> X 1
+
+
+#Move down
+1 ***x -> S 1
+1 ***S -> E 2
+
+#Move up
+2 x*** -> N 2
+2 N*** -> E 1
