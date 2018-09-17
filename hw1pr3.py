@@ -57,19 +57,6 @@ assert mult(0, 7)   ==   0
 assert mult(0, 0)   ==   0
 
 
-#
-# leng example from class
-#
-def leng(s):
-    """leng returns the length of s
-        Yes, it's already built in as len(s), but...
-        Argument: s, which can be a string or list
-    """
-    if s == '' or s == []:   # if empty string or empty list
-        return 0
-    else:
-        return 1 + leng(s[1:])
-
 def dot(L, K):
     """dot returns the dot product of two list
        Argument L: a list of integers
@@ -115,6 +102,87 @@ assert ind(' ', 'outer exploration')      == 5
 
 def letterScore(let):
     """Returns the value of the character as a Scrabble tile. If not one of the letters, returns 0
-       Argument let: single-cahracter string
+       Argument let: single-character string
     """
-    
+    if let in 'qz':
+        return 10
+    elif let in 'aeilnorstu':
+        return 1
+    elif let in 'dg':
+        return 2
+    elif let in 'bcmp':
+        return 3
+    elif let in 'fhvwy':
+        return 4
+    elif let in 'k':
+        return 5
+    elif let in 'jx':
+        return 8
+    elif let in 'qz':
+        return 10
+    else:
+        return 0
+
+#
+# Tests
+#
+assert letterScore('j') == 8
+assert letterScore('w') == 4
+assert letterScore('%') == 0
+
+
+def scrabbleScore(S):
+    """returns the scrabble score of a string
+       Argument S: a string of only lowercase letters
+    """
+    if S == '':
+        return 0
+    else:
+        return letterScore(S[0:1]) + scrabbleScore(S[1:])
+
+#
+# Tests
+#
+assert scrabbleScore('quetzal')                    == 25
+assert scrabbleScore('jonquil')                    == 23
+assert scrabbleScore('syzygy')                     == 25
+assert scrabbleScore('abcdefghijklmnopqrstuvwxyz') == 87
+assert scrabbleScore('?!@#$%^&*()')                == 0
+assert scrabbleScore('')                           == 0
+
+
+
+def one_dna_to_rna(c):
+        """Converts a single-character c from DNA
+           nucleotide to complementary RNA nucleotide """
+        if c == 'A':
+            return 'U'
+        elif c == 'C':
+            return 'G'
+        elif c == 'G':
+            return 'C'
+        elif c == 'T':
+            return 'A'
+        else:
+            return ''
+
+
+def transcribe(S):
+    """Returns the messenger RNA that would be produced from the string S.
+       Argument S: string S, containing DNA nucleotides(AS, CS, GS, TS)
+    """
+
+    if len(S) == 0:
+        return ''
+    else:
+        return one_dna_to_rna(S[0]) + transcribe(S[1:])
+
+
+#
+# Tests
+#
+assert transcribe('ACGTTGCA') == 'UGCAACGU'
+assert transcribe('ACG TGCA') == 'UGCACGU' # Note that the space disappears
+assert transcribe('GATTACA')  == 'CUAAUGU'
+assert transcribe('cs5')      == ''        # Note that the other characters disappear
+assert transcribe('')         == ''
