@@ -33,13 +33,12 @@ def rwsteps(start, low, hi):
        Argument low: nonnegative number representing the smalled value the sleepwalker can wander
        Argument hi: the highest number the sleepwalker can wander
     """
-    print('|' + ('_' *((start - low) )) + 'S' + ('_'* ((hi - start)) + '|'))
-    newstart = start + rs()
-    if newstart <= low or newstart >= hi:
+    print('|' + ('_' * (start - low)) + 'S' + ('_'* (hi - start) + '|'))
+    if start == low or start == hi:
         return 0
     else:
-        rest_of_steps = rwsteps(newstart, low, hi)
-        return rest_of_steps + 1
+        return 1 + rwsteps(start + rs(), low, hi)
+
 
 def rwposPlain(start, nsteps):
     """this function returns the random walker's position.
@@ -48,15 +47,36 @@ def rwposPlain(start, nsteps):
        to take from the starting position
     """
     if nsteps == 0:
-        print(start)
+        return start
+    return rwposPlain(start + rs(), nsteps - 1)
 
-    else:
-        return rwposPlain(start + rs(), nsteps - 1)
-
-def disp(start, n):
+def ave_signed_displacement(numtrials):
     """returns the signed displacement from the starting position
-       Argument start: starting postion
-       Argument n: the number of nsteps
+       Argument nums: the number of trials
     """
-    move = rwposPlain(start, n)
-    return move - start
+    LC = [rwposPlain(0, 100) for x in range(numtrials)]
+    return  float(sum(LC))/ numtrials
+
+def ave_squared_displacement(numtrials):
+    """returns the average of the squares
+       Argument numtrials: the number of trials
+    """
+    LC = [rwposPlain(0, 100)**2 for x in range(numtrials)]
+    return  float(sum(LC))/ numtrials
+
+print(ave_signed_displacement(100))
+print(ave_squared_displacement(100))
+
+"""
+    To compute the average sighned displacement for a random walker
+    after 100 random steps, I created a function named rwposPlain
+    that returns an integer of the random walker's position. Next,
+    I created ave_signed_displacement and ave_squared_displacement.
+    These functions create lists of random walkers who start from 0
+    and move 100 spaces randomly. It then bootstraps that calculation
+    for the number of trials prefered. Finally, I calculated the average
+    by summing those calculations and dividing by the numbewr of trials.
+
+    ave_signed_displacement = -0.82
+    ave_squared_displacement = 74.36
+"""
