@@ -1,6 +1,6 @@
 # CS 5 Gold, hw2pr3
 # filename: hw2pr3.py
-# Name: Austin Long
+# Name: Austin Long and Charlie Mangum
 # problem description: List comprehensions
 
 # this gives us functions like sin and cos...
@@ -65,7 +65,7 @@ assert unitfracs(10) == [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 def scaledfracs(low, hi, N):
     """Returns N left endpoints uniformly through the interval [low, hi)
     """
-    return [low + (x/N * ((hi-low)*N)) for x in unitfracs(N)]
+    return [round(low + (x/N * ((hi-low)*N)), 3) for x in unitfracs(N)]
 
 assert scaledfracs(10, 30, 5) == [10.0, 14.0, 18.0, 22.0, 26.0]
 assert scaledfracs(41, 43, 8) == [41.0, 41.25, 41.5, 41.75, 42.0, 42.25, 42.5, 42.75]
@@ -84,11 +84,11 @@ def f_of_fracs(f, low , hi, N):
     """Takes a function as its first argument, f
        Then returns a list that has function f applied to it uniformly
     """
-    return [f(x) for x in scaledfracs(low, hi, N)]
+    return [round(f(x), 3) for x in scaledfracs(low, hi, N)]
 
 assert f_of_fracs(dbl, 10, 20, 5) == [20.0, 24.0, 28.0, 32.0, 36.0]
 assert f_of_fracs(sq, 4, 10, 6) == [16.0, 25.0, 36.0, 49.0, 64.0, 81.0]
-assert f_of_fracs(sin, 0, pi, 4) ==  [0.0, 0.7071067811865475, 1.0, 0.7071067811865476]
+assert f_of_fracs(sin, 0, pi, 4)  ==  [0.0, 0.707, 1.0, 0.707]
 
 def integrate(f, low, hi, N):
     """Integrate returns an estimate of the definite integral
