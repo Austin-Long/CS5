@@ -1,6 +1,6 @@
 # CS5 Gold, hw2pr2
 # Filename: hw2pr2.py
-# Name:
+# Name: Ausitn Long and Charlie Mangum
 # Problem description: Sleepwalking student
 
 import random
