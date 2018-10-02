@@ -150,12 +150,12 @@ def jscore(S, T):
        jotto score: the number of characters in S that are shared by T,
        repeated letters are counted multiple times
     """
-    if len(S) == 0 or len(T) == 0:
+    if len(S) == 0:
         return 0
-    if S[0] in T:
-        return count(S[0], T)
-    else:
-        return jscore(S[1:], T)
+    elif S[0] not in T:
+        return 0 + jscore(S[1:],T)
+    elif S[0] in T:
+        return 1 + jscore(S[1:],remOne(S[0],T))
 
 
 assert jscore('diner', 'syrup') == 1
