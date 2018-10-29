@@ -1,0 +1,10 @@
+1. The researcher needed to show that the water computer could compute
+in a synchronized way. Computer programs execute several simultaneous operations
+conducted in a step by step manner, the clock enables them to start and stop
+correctly.
+
+2. In my opinion, the physical matter the biological computer is manipulating
+is physical matter. Water consists of hydrogen and oxygen molecules, which can
+be found in many physical substances. The question is murkier for me when I think
+about what is truly a biological organism, but in so far as water is physical matter
+I agree this computer can move physical matter. 

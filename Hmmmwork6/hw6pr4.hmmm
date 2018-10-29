@@ -1,0 +1,35 @@
+# hw6 problem 4
+#
+# Name(s): Austin Long
+#
+# Hmmm...Power_Recursive
+#
+#
+
+00 read r2             # Read base input into r2
+01 read r1             # Read power into r1
+02 setn r15 42         # Initialize the stack pointer
+03 nop                 # space for expansion (see hw6pr4!)
+04 calln r14 8         # Call the power function (at line 8)
+05 nop                 # space for expansion (or printing)
+06 write r13           # Write result to the screen
+07 halt                # All done!
+
+# +++ Power function +++
+# Base Case (lines 7-10)
+08 jnezn r1 12          # the base-case test: is the input(power) r1 != 0 ?
+09 setn  r13 1          # If r1 is 0, then the return value, r13, is 1
+10 nop                  # room for expansion (or printing!)
+11 jumpr r14            # Return the value, r13, to the line # in r14
+
+# Recursive Case (lines 11-20)
+12 pushr r1  r15        # Save (push) r1 to the stack (at loc. r15)
+13 pushr r14 r15        # Save (push) r14 to the stack
+14 addn  r1 -1          # Find N-1 and put it into r1
+15 nop                  # room for expansion (or printing)
+16 calln r14 8          # Then, ask for power of N-1  (Wow!)
+17 nop                  # room for expansion (or printing)
+18 popr  r14 r15        # Recover (pop) r14 from the stack
+19 popr  r1  r15        # Recover (pop) r1 from the stack
+20 mul   r13 r2 r13     # Calculate r13 = N * pow(N-1)   (Wow!)
+21 jumpr r14            # All done! return r13 to the caller at r14

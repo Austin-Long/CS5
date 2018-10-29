@@ -2,6 +2,7 @@
 # Filename: hw2pr2.py
 # Name: Ausitn Long and Charlie Mangum
 # Problem description: Sleepwalking student
+# -*- coding: UTF-8 -*-
 
 import random
 import sys
@@ -33,7 +34,8 @@ def rwsteps(start, low, hi):
        Argument low: nonnegative number representing the smalled value the sleepwalker can wander
        Argument hi: the highest number the sleepwalker can wander
     """
-    print('|' + ('_' * (start - low)) + 'S' + ('_'* (hi - start) + '|'))
+
+    print('₿' + ('_' * (start - low)) + '\U0001F911'+ ('_'* (hi - start) + '₿'))
     if start == low or start == hi:
         return 0
     else:
@@ -64,8 +66,8 @@ def ave_squared_displacement(numtrials):
     LC = [rwposPlain(0, 100)**2 for x in range(numtrials)]
     return  float(sum(LC))/ numtrials
 
-print(ave_signed_displacement(100))
-print(ave_squared_displacement(100))
+ave_signed_displacement(100)
+ave_squared_displacement(100)
 
 """
     To compute the average sighned displacement for a random walker

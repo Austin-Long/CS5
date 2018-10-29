@@ -1,0 +1,19 @@
+# hw6pr1a.hmmm is an example program that
+#   1) asks the user for an input
+#   2) calculates the cube of the input
+#   3) counts down to 0 from the cube output
+#
+# Name(s): Austin Long
+#
+
+00 read r1          # get # from user to r1
+01 mul r3 r1 r1     # multiple r3i by itself
+02 mul r3 r3 r1     # multiple r3 by itself again
+03 write r3         # print the value of r3
+04 addn r3 -1       # subtract 1 from the cube of r1
+05 write r3         # print 1 - the cube of r1
+06 jnezn r3 4       # If r3 does not equal 0 return to line 4
+07 halt             # stop
+
+# Lab task #1a: Change the above code to "the cubic countdown"
+# See the lab description for details

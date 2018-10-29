@@ -1,0 +1,20 @@
+# hw6 problem 3
+#
+# Name(s): Austin Long
+#
+# Hmmm...Fibonacci
+#
+
+
+00 read r1          # get n from user to r1
+01 setn r2 1        # set r2 = 1
+02 setn r3 1        # set r3 = 1
+03 jeqzn r1 11      # if r1 == 0, go to line 12
+04 write r2         # print r2
+05 copy r4 r3       # copy r3 into r4
+06 add r4 r4 r2     # make r4 = r4 + r2
+07 copy r2 r3       # copy r3 into r2
+08 copy r3 r4       # copy r4 into r3
+09 addn r1 -1        # decrease counter by 1
+10 jumpn 03         # jump to line 4
+11 halt             # stop.

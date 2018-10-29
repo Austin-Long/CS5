@@ -1,0 +1,9 @@
+The most interesting idea in the article is Watson's ability to process natural
+language. Natural language processing is a complex idea and I love
+to learn about advances in this area. I don't think Watson's capabilities will
+make a big impact on any advanced quantitative prediction methods used in Finance.
+I think it could have an interesting impact on information translation into other
+human languages. Watson style is similar to human style in that it parses through
+the sometimes cryptic Jeopardy questions. However, it differs in its ability to
+always understand that words can be used in several ways. The nuances of the
+language seem hard to code into Watson.

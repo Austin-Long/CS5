@@ -1,0 +1,11 @@
+Hopper states two disadvantages:
+  1. Some time is lost in completing duplicate data transfers
+  2. If the function you want does not exist you have to create it and add it to a library
+
+I would say these drawbacks still exist, but certainly not to the same extent they did
+when the paper was written. Today, they are significantly less important because so many
+functions and packages exist allowing us to not have to duplicate code. The first problem still
+exists and may improve in time.
+
+An advantage of using a language like Python that Hopper does not list is ease of syntax.
+Functions have become incredibly easier to read and write because of these higher level languages.

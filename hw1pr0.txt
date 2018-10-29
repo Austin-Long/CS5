@@ -1,0 +1,14 @@
+
+# Austin Long
+# hw1pr0.txt
+
+2) The article states that, whether in science or business, we "don't have to settle for models at all."
+Do you agree or disagree with this statement? How? And why? Certainly feel free to articulate a more
+nuanced or hybrid view, if you'd like.
+
+I agree with the article, models have become obsolete for analyzing big data problems. You do not need to understand the
+underlying model in order to use a statistical algorithm to best predict ad spend based on millions of data points. I will
+argue that understanding the underlying model can sometimes make a solution more accessible, but it is not always
+necessary. In certain situations, the customer may not be comfortable with just letting the machine churn out a result.
+I would predict we are not far away from advanced statistical learning becoming the backbone of just about every
+successful business.

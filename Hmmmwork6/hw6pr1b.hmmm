@@ -1,0 +1,20 @@
+# hw6pr1b.hmmm will become a random-number generator
+#
+# Name(s): Austin Long
+
+# Lab task #2: Expand this to become your random-number generator:
+#   (Note: this is starter code that correctly handles the inputs...)
+
+00 read r1       # input a
+01 read r2       # input c
+02 read r3       # input m
+03 read r4       # input X_0
+04 read r5       # input N
+05 jeqzn r5 12   # if N is 0 jump to last line and exit
+06 addn r5 -1    # decrease N by 1
+07 mul r4 r4 r1  # multiply a * X0
+08 add r4 r4 r2  # add c to (a*X0)
+09 mod r4 r4 r3  # divide ((a*X0) + c) by m and get the remainder
+10 write r4      # print X1
+11 jumpn 5       # jump to line 5
+12 halt          # stop

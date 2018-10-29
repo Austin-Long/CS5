@@ -1,0 +1,15 @@
+# hw6 problem 2
+#
+# Name(s): Austin Long
+#
+
+# This is a placeholder whose code you'll replace:
+00 read r1          # get base from the user
+01 read r2          # get the power from the user
+02 setn r3 1        # Set the base case, r3 = 1
+03 jeqzn r2 07      # if power == 0 jump to line 8
+04 mul r3 r3 r1     # Multiply the base case with the base r3 = r3 * r1
+05 addn r2 -1       # Make r2 = r2 - 1
+06 jumpn 03         # Jump to line 3
+07 write r3         # print what's in r3
+08 halt             # stop.
