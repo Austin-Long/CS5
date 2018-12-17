@@ -1,0 +1,9 @@
+I agree algorithms are subjective as a judge of human behavior. That being
+said I find the argument that these machine learning tools are discriminating
+based on gender flawed. Without knowing exactly why men are shown the ad more
+than women, it seems to me these researchers are making an educated guess that
+it is due to our underlying bias. It could easily be the company who bought the
+ad from google wanted to target men more than woman. Back to the question at hand,
+it is possible that those who design these systems are building in their own
+bias into them. We should be aware of this problem when developing these complex
+systems.

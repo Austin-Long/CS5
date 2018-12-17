@@ -1,0 +1,8 @@
+# final.txt
+#Austin long and Chuck Mangum
+
+For our variation to Connect 4 we implemented a horizontal game.
+Gravity goes to the Right.
+Tiebreak Options are "Up", "Down", or "Random".
+Board size b = Board(6, 7) works best
+Happy Playing.
